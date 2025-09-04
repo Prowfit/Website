@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color:#E9F5DB;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color:#B5C99A;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav {
+      background-color: #415D43;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #E75480;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .carousel img {
+      width: 100%;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .carousel-controls button {
+      padding: 8px 15px;
+      margin: 0 5px;
+      background-color: #7b68ee;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .carousel-controls button:hover {
+      background-color: #5a4cc1;
+    }
+
+    .info {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info h2 {
+      color: #7b68ee;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #eee;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .carousel-controls button {
+        width: 40%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>All about ME</h1>
+  <p>Welcome to my personal website</p>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#album">Album</a>
+  <a href="#performance">Performance</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <!-- Home Section -->
+  <section id="home">
+    <img src="myphoto.jpg" alt="Gremar P. Cortez">
+  </section>
+
+  <!-- Album / Carousel Section -->
+  <section id="album">
+    <div class="carousel" id="carousel">
+      <img src="Nahida.jpg" class="active" alt="Photo 1">
+      <img src="Field.jpg" alt="Photo 2">
+      <img src="Night.jpg" alt="Photo 3">
+      <img src="Sky.jpg" alt="Photo 4">
+      <img src="Walk.jpg" alt="Photo 5">
+    </div>
+    <div class="carousel-controls">
+      <button onclick="prevSlide()">❮ Prev</button>
+      <button onclick="nextSlide()">Next ❯</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="info">
+    <h2>About Me</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <!-- Left: Profile Image -->
+      <div style="flex: 1; min-width: 250px;">
+        <img src="Me.jpg" alt="Gremar P. Cortez" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+      </div>
+
+      <!-- Right: Personal Details -->
+      <div style="flex: 2; min-width: 250px;">
+        <p><strong>Full Name:</strong> Gremar P. Cortez</p>
+        <p><strong>Age:</strong> 17 years old</p>
+        <p><strong>Birthday:</strong> December 12, 2007</p>
+        <p><strong>Location:</strong> BuhayNaTubig, Imus, Cavite</p>
+        <p><strong>Fav Color:</strong> Black&White</p>
+        <p><strong>Fav Dish:</strong> Food i can Eat</p>
+        <p><strong>Fav Ice Cream Flavor:</strong> Cheese, cookies and cream</p>
+        <p><strong>Random Fact About Me:</strong> I Can Count To 100 (Japanese)</p>
+        <p><strong>Fav Things to Do:</strong> PLaying, Reading, Watching, Sleeping</p>
+        <p><strong>Fav Subject:</strong> English, I love English</p>
+        <p><strong>Fav Flower:</strong> Red spider lily, red</p>
+        <p><strong>Fav OPM Bands:</strong> Ben and Ben, Cup of Joe, IV of Spades</p>
+        <p><strong>Fav International Singers:</strong> BoyWithUke, CG5, AJR, Seafret, Jordansweeto</p>
+      </div>
+    </div>
+
+    <h2>Family</h2>
+    <p><strong>Mother's Name:</strong> Marjorie Alamang Pascual</p>
+    <p><strong>Father's Name:</strong> Greg Cortez Wabinga</p>
+
+    <h2>Education</h2>
+    <p><strong>Preschool to Grade 6:</strong> BuhayNaTubig Elementary School</p>
+    <p><strong>Grade 7 to 10:</strong> General emillio aguinaldo high school</p>
+    <p><strong>Grade 11 to 12:</strong> Gov. Juanito Reyes Remulla Senior High School</p>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="info">
+    <h2>Achievements</h2>
+    <p></p>
+    <p>•Grade 11 (Most lulubog lilitaw)</p>
+    <p>•</p>
+    <p>•</p>
+    <p>•</p>
+    <p>•</p>
+    <p>•</p>
+  </section>
+
+  <!-- Performance Task Section -->
+  <section id="performance" class="info">
+    <h2>Performance Task</h2>
+    <p><strong>Performance Task 1:</strong></p>
+    <p><strong>Performance Task 2:</strong></p>
+    <p><strong>Performance Task 3:</strong></p>
+    <p><strong>Performance Task 4:</strong></p>
+	<p><strong>Performance Task 5:</strong></p>
+    <p><strong>Performance Task 6:</strong></p>
+    <p><strong>Performance Task 7:</strong></p>
+    <p><strong>Performance Task 8:</strong></p>
+    <p><strong>Performance Task 9:</strong></p>
+    <p><strong>Performance Task 10:</strong></p>
+  <!-- Contact Section -->
+  <section id="contact" class="info">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:prowfitacc@gmail.com">prowfitacc@gmail.com</a></p>
+    <p><strong>Facebook:</strong> <a href="https://facebook.com" target="_blank">Gremar P. Cortez</a></p>
+    <p><strong>Phone:</strong> <a href="tel:09911768147">09911768147</a></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Gremar P. Cortez
+</footer>
+
+<!-- JavaScript for Carousel Interactivity -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel img');
+  let autoSlide = setInterval(nextSlide, 3000);
+
+  function showSlide(index) {
+    slides.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) img.classList.add('active');
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Pause carousel on hover
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  carousel.addEventListener('mouseleave', () => autoSlide = setInterval(nextSlide, 3000));
+</script>
+
+</body>
+</html>
